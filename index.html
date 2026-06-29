@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atiq ur Rehman — Frontend Developer</title>
+  <meta name="description" content="Frontend Developer & Computer Science student building fast, accessible, well-crafted interfaces. View projects, skills, and resume." />
+  <meta name="theme-color" content="#0B0E14" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Atiq ur Rehman — Frontend Developer" />
+  <meta property="og:description" content="Frontend Developer & CS student. Projects, skills, and resume." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- ============ LOADER ============ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__terminal">
+      <span class="loader__prompt">$</span>
+      <span class="loader__text" id="loaderText"></span><span class="loader__cursor">▌</span>
+    </div>
+  </div>
+
+  <!-- ============ SKIP LINK ============ -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar__inner" aria-label="Primary">
+      <a href="#home" class="navbar__logo" aria-label="Atiq ur Rehman — home">
+        <span class="navbar__logo-bracket">&lt;</span>AR<span class="navbar__logo-bracket">/&gt;</span>
+      </a>
+
+      <button class="navbar__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+
+      <ul class="navbar__menu" id="navMenu">
+        <li><a href="#home" class="navbar__link active" data-section="home">Home</a></li>
+        <li><a href="#about" class="navbar__link" data-section="about">About</a></li>
+        <li><a href="#skills" class="navbar__link" data-section="skills">Skills</a></li>
+        <li><a href="#projects" class="navbar__link" data-section="projects">Projects</a></li>
+        <li><a href="#resume" class="navbar__link" data-section="resume">Resume</a></li>
+        <li><a href="#contact" class="navbar__link" data-section="contact">Contact</a></li>
+        <li><a href="resume/Atiq_ur_Rehman_Resume.pdf" class="navbar__cta" download>Resume.pdf</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__grid"></div>
+        <div class="hero__glow hero__glow--1"></div>
+        <div class="hero__glow hero__glow--2"></div>
+      </div>
+
+      <div class="hero__inner container">
+        <div class="hero__content reveal">
+          <p class="hero__eyebrow"><span class="dot dot--live"></span>Available for Summer 2027 internships</p>
+
+          <h1 class="hero__title">
+            Hi, I'm <span class="hero__name">Atiq ur Rehman</span><br />
+            I build interfaces that <span class="hero__highlight">feel inevitable.</span>
+          </h1>
+
+          <p class="hero__desc">
+            Computer Science student and frontend developer focused on clean component architecture,
+            accessible markup, and motion that earns its place. Currently sharpening React and Node
+            while shipping things with plain HTML, CSS, and JavaScript.
+          </p>
+
+          <div class="hero__actions">
+            <a href="resume/Atiq_ur_Rehman_Resume.pdf" class="btn btn--primary" download>
+              <span>Download Résumé</span>
+              <svg class="btn__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1V11M8 11L4 7M8 11L12 7M2 14H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#projects" class="btn btn--ghost">
+              <span>View Projects</span>
+              <svg class="btn__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+
+          <div class="hero__meta">
+            <span class="hero__meta-item">📍 Gujrat, Pakistan</span>
+            <span class="hero__meta-item">🎓 BS Computer Science, Class of 2027</span>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal" data-reveal-delay="150">
+          <div class="terminal-card">
+            <div class="terminal-card__header">
+              <span class="terminal-card__dot terminal-card__dot--red"></span>
+              <span class="terminal-card__dot terminal-card__dot--yellow"></span>
+              <span class="terminal-card__dot terminal-card__dot--green"></span>
+              <span class="terminal-card__title">about-me.js</span>
+            </div>
+            <pre class="terminal-card__body"><code><span class="tok-kw">const</span> <span class="tok-var">developer</span> = {
+  <span class="tok-key">name</span>: <span class="tok-str">'Atiq ur Rehman'</span>,
+  <span class="tok-key">role</span>: <span class="tok-str">'Frontend Developer'</span>,
+  <span class="tok-key">based</span>: <span class="tok-str">'Gujrat, PK'</span>,
+  <span class="tok-key">stack</span>: [<span class="tok-str">'HTML'</span>, <span class="tok-str">'CSS'</span>, <span class="tok-str">'JS'</span>],
+  <span class="tok-key">learning</span>: [<span class="tok-str">'React'</span>, <span class="tok-str">'Node.js'</span>],
+  <span class="tok-key">openToWork</span>: <span class="tok-bool">true</span>,
+};
+
+<span class="tok-kw">function</span> <span class="tok-fn">sayHi</span>() {
+  <span class="tok-kw">return</span> <span class="tok-str">`Hey, let's build something.`</span>;
+}</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+        <span class="scroll-cue__line"></span>
+        <span class="scroll-cue__label">scroll</span>
+      </a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__eyebrow">About</p>
+          <h2 class="section__title">A little about how I think.</h2>
+        </div>
+
+        <div class="about__grid">
+          <article class="card about-card reveal">
+            <h3 class="about-card__title"><span class="about-card__icon">◆</span>Biography</h3>
+            <p class="about-card__text">
+              I'm a third-year Computer Science student who fell in love with the front end the moment
+              a CSS transition I wrote actually felt good to use. Since then I've been chasing that
+              feeling: building interfaces that are fast, accessible, and a little bit delightful,
+              without losing sight of the engineering underneath.
+            </p>
+          </article>
+
+          <article class="card about-card reveal" data-reveal-delay="80">
+            <h3 class="about-card__title"><span class="about-card__icon">◆</span>Career Objective</h3>
+            <p class="about-card__text">
+              Looking for a remote Frontend Developer internship or junior role where I can work
+              alongside experienced engineers, contribute to real production interfaces, and grow
+              into a developer who's trusted with ambiguous problems, not just pixel-perfect tickets.
+            </p>
+          </article>
+
+          <article class="card about-card reveal" data-reveal-delay="160">
+            <h3 class="about-card__title"><span class="about-card__icon">◆</span>Education</h3>
+            <p class="about-card__text">
+              Bachelor of Science in Computer Science<br />
+              <span class="about-card__muted">Expected Graduation — 2027</span><br /><br />
+              Relevant coursework: Data Structures & Algorithms, Object-Oriented Programming,
+              Database Systems, Web Engineering.
+            </p>
+          </article>
+
+          <article class="card about-card reveal" data-reveal-delay="240">
+            <h3 class="about-card__title"><span class="about-card__icon">◆</span>Currently Learning</h3>
+            <p class="about-card__text">
+              Deepening my React fundamentals (hooks, component composition, state management) and
+              getting comfortable on the Node.js side so I can reason about the full request lifecycle,
+              not just what renders in the browser.
+            </p>
+          </article>
+
+          <article class="card about-card reveal" data-reveal-delay="320">
+            <h3 class="about-card__title"><span class="about-card__icon">◆</span>Interests</h3>
+            <p class="about-card__text">
+              Design systems, accessibility audits, competitive programming, and a slowly-growing
+              collection of mechanical keyboard switches I definitely don't need.
+            </p>
+          </article>
+
+          <article class="card about-card about-card--stat reveal" data-reveal-delay="400">
+            <h3 class="about-card__title"><span class="about-card__icon">◆</span>By the Numbers</h3>
+            <div class="about-card__stats">
+              <div class="mini-stat"><span class="mini-stat__num" data-count="3">0</span><span class="mini-stat__label">Years coding</span></div>
+              <div class="mini-stat"><span class="mini-stat__num" data-count="15">0</span><span class="mini-stat__label">Projects built</span></div>
+              <div class="mini-stat"><span class="mini-stat__num" data-count="6">0</span><span class="mini-stat__label">Languages used</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__eyebrow">Skills</p>
+          <h2 class="section__title">Tools I reach for.</h2>
+        </div>
+
+        <div class="skills__grid">
+
+          <div class="skill-group reveal">
+            <h3 class="skill-group__title">Frontend</h3>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <div class="skill-item__row"><span>HTML5</span><span class="skill-item__pct">95%</span></div>
+                <div class="skill-bar"><div class="skill-bar__fill" data-level="95"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item__row"><span>CSS3</span><span class="skill-item__pct">90%</span></div>
+                <div class="skill-bar"><div class="skill-bar__fill" data-level="90"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item__row"><span>JavaScript</span><span class="skill-item__pct">85%</span></div>
+                <div class="skill-bar"><div class="skill-bar__fill" data-level="85"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item__row"><span>Responsive Design</span><span class="skill-item__pct">88%</span></div>
+                <div class="skill-bar"><div class="skill-bar__fill" data-level="88"></div></div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal" data-reveal-delay="80">
+            <h3 class="skill-group__title">Programming</h3>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <div class="skill-item__row"><span>C++</span><span class="skill-item__pct">80%</span></div>
+                <div class="skill-bar"><div class="skill-bar__fill" data-level="80"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item__row"><span>Python</span><span class="skill-item__pct">75%</span></div>
+                <div class="skill-bar"><div class="skill-bar__fill" data-level="75"></div></div>
+              </li>
+            </ul>
+
+            <h3 class="skill-group__title skill-group__title--spaced">Tools</h3>
+            <div class="badge-row">
+              <span class="badge">Git</span>
+              <span class="badge">GitHub</span>
+              <span class="badge">VS Code</span>
+              <span class="badge">Figma</span>
+              <span class="badge">npm</span>
+            </div>
+          </div>
+
+          <div class="skill-group reveal" data-reveal-delay="160">
+            <h3 class="skill-group__title">Currently Learning</h3>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <div class="skill-item__row"><span>React</span><span class="skill-item__pct">60%</span></div>
+                <div class="skill-bar"><div class="skill-bar__fill" data-level="60"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item__row"><span>Node.js</span><span class="skill-item__pct">45%</span></div>
+                <div class="skill-bar"><div class="skill-bar__fill" data-level="45"></div></div>
+              </li>
+            </ul>
+            <p class="skill-group__note">// still compiling — check back soon</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__eyebrow">Projects</p>
+          <h2 class="section__title">Things I've shipped.</h2>
+        </div>
+
+        <div class="projects__grid">
+
+          <article class="project-card reveal">
+            <div class="project-card__media">
+              <img src="assets/images/project-portfolio.svg" alt="Preview of the Personal Portfolio website" loading="lazy" width="600" height="400" />
+              <div class="project-card__overlay">
+                <p>A from-scratch portfolio focused on performance and motion design — no frameworks, just vanilla CSS and JS.</p>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Personal Portfolio</h3>
+              <p class="project-card__desc">Fully responsive personal site with scroll-reveal animations, a custom loader, and an accessible, semantic structure.</p>
+              <div class="project-card__tags">
+                <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/" class="link-btn" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="#" class="link-btn link-btn--solid">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-reveal-delay="80">
+            <div class="project-card__media">
+              <img src="assets/images/project-marketplace.svg" alt="Preview of the Multi-Vendor Marketplace Website" loading="lazy" width="600" height="400" />
+              <div class="project-card__overlay">
+                <p>Browse, filter, and cart flows for a marketplace with multiple independent vendor storefronts.</p>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Multi-Vendor Marketplace</h3>
+              <p class="project-card__desc">A storefront concept supporting multiple vendors, product filtering, and a persistent cart with local state.</p>
+              <div class="project-card__tags">
+                <span class="tag">JavaScript</span><span class="tag">CSS Grid</span><span class="tag">REST API</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/" class="link-btn" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="#" class="link-btn link-btn--solid">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-reveal-delay="160">
+            <div class="project-card__media">
+              <img src="assets/images/project-ai-dashboard.svg" alt="Preview of the AI Assistant Dashboard" loading="lazy" width="600" height="400" />
+              <div class="project-card__overlay">
+                <p>A chat-driven dashboard layout exploring streaming responses and conversational UI patterns.</p>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">AI Assistant Dashboard</h3>
+              <p class="project-card__desc">Conversational interface with message streaming, theming, and a sidebar for managing chat history.</p>
+              <div class="project-card__tags">
+                <span class="tag">JavaScript</span><span class="tag">Fetch API</span><span class="tag">CSS</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/" class="link-btn" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="#" class="link-btn link-btn--solid">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-reveal-delay="80">
+            <div class="project-card__media">
+              <img src="assets/images/project-admin.svg" alt="Preview of the Admin Dashboard" loading="lazy" width="600" height="400" />
+              <div class="project-card__overlay">
+                <p>Data-dense admin panel with sortable tables, charts, and dark/light theme switching.</p>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Admin Dashboard</h3>
+              <p class="project-card__desc">A reusable dashboard shell with charts, tables, and reusable UI components built from scratch.</p>
+              <div class="project-card__tags">
+                <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Chart.js</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/" class="link-btn" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="#" class="link-btn link-btn--solid">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-reveal-delay="160">
+            <div class="project-card__media">
+              <img src="assets/images/project-github-explorer.svg" alt="Preview of the GitHub Profile Explorer" loading="lazy" width="600" height="400" />
+              <div class="project-card__overlay">
+                <p>Look up any GitHub username and see their repos, stars, and activity at a glance.</p>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">GitHub Profile Explorer</h3>
+              <p class="project-card__desc">Consumes the GitHub REST API to surface a user's repositories, languages, and stats in one view.</p>
+              <div class="project-card__tags">
+                <span class="tag">JavaScript</span><span class="tag">GitHub API</span><span class="tag">CSS</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/" class="link-btn" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="#" class="link-btn link-btn--solid">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-reveal-delay="240">
+            <div class="project-card__media">
+              <img src="assets/images/project-weather.svg" alt="Preview of the Weather Dashboard" loading="lazy" width="600" height="400" />
+              <div class="project-card__overlay">
+                <p>Search any city for live conditions, a 5-day outlook, and unit conversion.</p>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Weather Dashboard</h3>
+              <p class="project-card__desc">Real-time weather lookup with geolocation support, animated condition icons, and graceful error states.</p>
+              <div class="project-card__tags">
+                <span class="tag">JavaScript</span><span class="tag">Weather API</span><span class="tag">CSS</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/" class="link-btn" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="#" class="link-btn link-btn--solid">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GITHUB STATS ============ -->
+    <section class="section section--alt" id="github-stats">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__eyebrow">GitHub Activity</p>
+          <h2 class="section__title">My open-source footprint.</h2>
+        </div>
+
+        <div class="stats__grid">
+          <div class="stat-card reveal">
+            <span class="stat-card__icon">⌥</span>
+            <span class="stat-card__num" data-count="412">0</span>
+            <span class="stat-card__label">Contributions this year</span>
+          </div>
+          <div class="stat-card reveal" data-reveal-delay="80">
+            <span class="stat-card__icon">◫</span>
+            <span class="stat-card__num" data-count="28">0</span>
+            <span class="stat-card__label">Public repositories</span>
+          </div>
+          <div class="stat-card reveal" data-reveal-delay="160">
+            <span class="stat-card__icon">◎</span>
+            <span class="stat-card__num" data-count="64">0</span>
+            <span class="stat-card__label">Followers</span>
+          </div>
+          <div class="stat-card reveal" data-reveal-delay="240">
+            <span class="stat-card__icon">◬</span>
+            <span class="stat-card__num" data-count="6">0</span>
+            <span class="stat-card__label">Languages used</span>
+          </div>
+        </div>
+        <p class="stats__disclaimer">Placeholder figures — swap in your live GitHub stats via the GitHub REST API or a service like github-readme-stats.</p>
+      </div>
+    </section>
+
+    <!-- ============ RESUME ============ -->
+    <section class="section" id="resume">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__eyebrow">Resume</p>
+          <h2 class="section__title">The short version, on paper.</h2>
+        </div>
+
+        <div class="resume-panel reveal">
+          <div class="resume-panel__col">
+            <h3 class="resume-panel__heading">Education</h3>
+            <div class="timeline-item">
+              <p class="timeline-item__title">Bachelor of Science in Computer Science</p>
+              <p class="timeline-item__sub">Expected Graduation — 2027</p>
+              <p class="timeline-item__desc">Coursework in algorithms, databases, operating systems, and web engineering, with a growing focus on frontend architecture.</p>
+            </div>
+          </div>
+
+          <div class="resume-panel__divider" aria-hidden="true"></div>
+
+          <div class="resume-panel__col resume-panel__col--cta">
+            <h3 class="resume-panel__heading">Want the full picture?</h3>
+            <p class="resume-panel__text">Education, projects, and skills — all in one PDF, ready to forward to a hiring manager.</p>
+            <a href="resume/Atiq_ur_Rehman_Resume.pdf" class="btn btn--primary" download>
+              <span>Download Résumé</span>
+              <svg class="btn__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1V11M8 11L4 7M8 11L12 7M2 14H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__eyebrow">Contact</p>
+          <h2 class="section__title">Let's build something together.</h2>
+        </div>
+
+        <div class="contact__grid">
+          <div class="contact__info reveal">
+            <p class="contact__intro">
+              Open to remote internships and junior frontend roles. The fastest way to reach me is email —
+              I read everything and reply within a day or two.
+            </p>
+
+            <ul class="contact-list">
+              <li class="contact-list__item">
+                <span class="contact-list__icon" aria-hidden="true">✉</span>
+                <div>
+                  <span class="contact-list__label">Email</span>
+                  <a href="mailto:officialatiqurrehman@gmail.com">officialatiqurrehman@gmail.com</a>
+                </div>
+              </li>
+              <li class="contact-list__item">
+                <span class="contact-list__icon" aria-hidden="true">⌥</span>
+                <div>
+                  <span class="contact-list__label">GitHub</span>
+                  <a href="https://github.com/M-AtiqUrRehman" target="_blank" rel="noopener noreferrer">github.com/M-AtiqUrRehman</a>
+                </div>
+              </li>
+              <li class="contact-list__item">
+                <span class="contact-list__icon" aria-hidden="true">in</span>
+                <div>
+                  <span class="contact-list__label">LinkedIn</span>
+                  <a href="https://www.linkedin.com/in/atiq-ur-rehman-b80b44285/" target="_blank" rel="noopener noreferrer">linkedin.com/in/atiq-ur-rehman</a>
+                </div>
+              </li>
+              <li class="contact-list__item">
+                <span class="contact-list__icon" aria-hidden="true">📍</span>
+                <div>
+                  <span class="contact-list__label">Location</span>
+                  <span>Gujrat, Pakistan (Remote-friendly)</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm" data-reveal-delay="120" novalidate>
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" placeholder="Jane Doe" required />
+              <span class="form-field__error" id="nameError" role="alert"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" placeholder="jane@example.com" required />
+              <span class="form-field__error" id="emailError" role="alert"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me a bit about the role or project..." required></textarea>
+              <span class="form-field__error" id="messageError" role="alert"></span>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full" id="contactSubmit">
+              <span>Send Message</span>
+              <svg class="btn__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8H14M14 8L9 3M14 8L9 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+
+            <p class="contact-form__status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">© <span id="year"></span> Atiq ur Rehman. Built with HTML, CSS &amp; JavaScript — no frameworks.</p>
+
+      <div class="footer__social">
+        <a href="https://github.com/M-AtiqUrRehman" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" class="footer__social-link">GitHub</a>
+        <a href="https://www.linkedin.com/in/atiq-ur-rehman-b80b44285/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" class="footer__social-link">LinkedIn</a>
+        <a href="mailto:officialatiqurrehman@gmail.com" aria-label="Send an email" class="footer__social-link">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ SCROLL TO TOP ============ -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll back to top">
+    <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13V3M8 3L3 8M8 3L13 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <script src="js/loader.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/skills.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/contact-form.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
